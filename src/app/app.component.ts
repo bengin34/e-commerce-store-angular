@@ -29,7 +29,7 @@ import { HeaderComponent } from "./components/header/header.component";
     MatGridListModule,
 
     MatButtonModule,
-    MatCardModule,
+
     MatIconModule,
     MatExpansionModule,
     MatListModule,

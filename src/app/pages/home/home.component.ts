@@ -1,13 +1,18 @@
-import { Component } from '@angular/core';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { ProductsHeaderComponent } from './components/products-header/products-header.component';
+import { Component } from "@angular/core";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { ProductsHeaderComponent } from "./components/products-header/products-header.component";
+import { FiltersComponent } from "./components/filters/filters.component";
 
 @Component({
-  selector: 'app-home',
+  selector: "app-home",
   standalone: true,
-  imports: [MatSidenavModule, ProductsHeaderComponent],
- templateUrl: './home.component.html',
+  imports: [MatSidenavModule, ProductsHeaderComponent,FiltersComponent],
+  templateUrl: "./home.component.html",
 })
 export class HomeComponent {
+  cols = 3;
 
+  onColumnsCountChanged(colsNum: number): void {
+    this.cols = colsNum;
+  }
 }
