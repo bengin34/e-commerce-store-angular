@@ -12,7 +12,13 @@ import { FiltersComponent } from "./components/filters/filters.component";
 export class HomeComponent {
   cols = 3;
 
+  category:string | undefined;
+
   onColumnsCountChanged(colsNum: number): void {
     this.cols = colsNum;
+  }
+
+  onShowCategory(newCategory: string): void {
+    this.category = newCategory;
   }
 }
